@@ -1,0 +1,11 @@
+%li.comment
+  %h3= comment.author
+
+  .body
+    = comment.body
+
+  %p= link_to "Add a reply", new_comment_comment_path(comment)
+
+  - unless comment.comments.empty?
+    %ul.comment-list
+      = render :partial => "comments/comment", :collection => comment.comments

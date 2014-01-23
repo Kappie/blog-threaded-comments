@@ -1,0 +1,19 @@
+- if flash[:notice]
+  %p= flash[:notice]
+
+%h1= @post.title
+
+.body
+  = @post.body
+
+%h2 Tags
+%p
+  = show_tags
+
+
+%h2 Comments
+%p= link_to "Add a comment", new_post_comment_path(@post)
+
+%ul.comment-list
+  = render :partial => "comments/comment", :collection => @post.comments
+

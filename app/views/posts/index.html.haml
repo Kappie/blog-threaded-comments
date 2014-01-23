@@ -1,0 +1,16 @@
+%h1= link_to "Posts", root_path
+
+- if flash[:notice]
+  %p= flash[:notice]
+
+%p= link_to "New post", new_post_path
+
+%h2 All tags
+%p.tags
+  = all_tags
+
+- @posts.each do |post|
+  #post
+    %h2= link_to post.title, post_path(post)
+    %p= post.author
+    %p= post.body

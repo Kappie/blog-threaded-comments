@@ -1,0 +1,4 @@
+- write specs!
+- refactor posts_controller#index
+- extract some methods to helper
+- tag cloud?

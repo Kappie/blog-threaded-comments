@@ -1,0 +1,16 @@
+= form_for @post do |form|
+  %p
+    = form.label :author
+    = form.text_field :author
+  %p
+    = form.label :title
+    = form.text_field :title
+  %p
+    = form.label :body
+    = form.text_area :body
+
+  %p
+    = form.label :tags
+    = form.text_field :tags
+
+  %p= form.submit
